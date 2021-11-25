@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+*::before,
+*::after {
+    box-sizing: border-box;    
+}
+section {
+    background-color: #2F4F4F;
+}
+.container {
+    max-width: 1140px;
+    height: 100vh;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .calculator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        input {
+            box-shadow:0 0 15px 4px rgba(15,39,39,0.08);
+            outline: none;
+            resize: none;
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            font-weight: 600;
+            color: #2F4F4F;
+            border-radius: 40px;
+            width: 400px;
+            height: 100px;
+            line-height: 50px;
+            padding-left: 25px;
+        }
+        .operations {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            padding: 30px;
+            
+            button {
+                background-color: #FFB841;
+                border-radius: 50px;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 40px;
+                font-weight: 600;
+                color: #2F4F4F;
+                width: 60px;
+                height: 60px;
+                line-height: 50px;
+                border: none;
+                &:hover{
+                    background-color: #0f2424;
+                }
+            }
+        }
+        .button {
+            padding: 30px;
+            .button-result {
+                background-color: #FFB841;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 40px;
+                font-weight: 400;
+                color: #2F4F4F;
+                text-transform: uppercase;
+                border: none;
+                border-radius: 40px;
+                width: 300px;
+                height: 60px;
+                line-height: 50px;
+                &:hover{
+                    background-color: #0f2424;
+                }
+            }
+
+        }
+        .result {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px;
+            font-weight: 600;
+            background-color: #0f2424;
+            color: #FFB841;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            width: 300px;
+            height: 80px;
+            line-height: 40px;
+            
+            
+        }
+    }
+}

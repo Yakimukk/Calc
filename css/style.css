@@ -1,0 +1,126 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  background-color: #2F4F4F;
+}
+
+.container {
+  max-width: 1140px;
+  height: 100vh;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.container .calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.container .calculator input {
+  -webkit-box-shadow: 0 0 15px 4px rgba(15, 39, 39, 0.08);
+          box-shadow: 0 0 15px 4px rgba(15, 39, 39, 0.08);
+  outline: none;
+  resize: none;
+  border: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #2F4F4F;
+  border-radius: 40px;
+  width: 400px;
+  height: 100px;
+  line-height: 50px;
+  padding-left: 25px;
+}
+.container .calculator .operations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px;
+}
+.container .calculator .operations button {
+  background-color: #FFB841;
+  border-radius: 50px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #2F4F4F;
+  width: 60px;
+  height: 60px;
+  line-height: 50px;
+  border: none;
+}
+.container .calculator .operations button:hover {
+  background-color: #0f2424;
+}
+.container .calculator .button {
+  padding: 30px;
+}
+.container .calculator .button .button-result {
+  background-color: #FFB841;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #2F4F4F;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 40px;
+  width: 300px;
+  height: 60px;
+  line-height: 50px;
+}
+.container .calculator .button .button-result:hover {
+  background-color: #0f2424;
+}
+.container .calculator .result {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  font-weight: 600;
+  background-color: #0f2424;
+  color: #FFB841;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 40px;
+  width: 300px;
+  height: 80px;
+  line-height: 40px;
+}
