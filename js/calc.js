@@ -4,94 +4,39 @@ const buttonMultiply = document.querySelector('.button-multiply')
 const buttonDivide = document.querySelector('.button-divide')
 const buttonResult = document.querySelector('.button-result')
 const resultat = document.querySelector('.result')
+const firstNumber = document.getElementById('number-one')
+const secondNumber = document.getElementById('number-two')
+let operation = 0
 
-
-
-buttonPlus.onclick = () => {
-    const firstNumber = document.getElementById('number-one').value
-    const secondNumber = document.getElementById('number-two').value
-    if ((firstNumber !== '')&&(secondNumber == '')) {
+function proverka(a,b, operation) {   
+    
+    if ((a !== '')&&(b == '')) {
         alert('Введите второе число и нажмите "Calculate"')
-    } else if ((firstNumber !== '')&&(secondNumber !== '')) {
-        alert('Нажмите "Calculate"')
-    } else if (firstNumber == '') {
-        alert('Введите первое чиcло и нажмите "+"')
-    }
-    buttonResult.onclick = () => {
-        const secondNumber = document.getElementById('number-two').value
-        const plusResult = (+firstNumber + +secondNumber)
-        console.log(plusResult)
-        resultat.textContent = plusResult
-    }
+    } else if (a == '') {
+        alert(`Введите первое чиcло и нажмите ${operation}`)
+    }   
 }
 
-buttonMinus.onclick = () => {
-    const firstNumber = document.getElementById('number-one').value
-    const secondNumber = document.getElementById('number-two').value
-    if ((firstNumber !== '')&&(secondNumber == '')) {
-        alert('Введите второе число и нажмите "Calculate"')
-    } else if ((firstNumber !== '')&&(secondNumber !== '')) {
-        alert('Нажмите "Calculate"')
-    } else if (firstNumber == '') {
-        alert('Введите первое чиcло и нажмите "-"')
-    }
-    buttonResult.onclick = () => {
-        const secondNumber = document.getElementById('number-two').value
-        const minusResult = (+firstNumber - +secondNumber)
-        console.log(minusResult)
-        resultat.textContent = minusResult
-    }
+
+const functionSign = sign => {
+    
+    operation = sign
+    proverka(firstNumber.value, secondNumber.value, operation)
 }
 
-buttonMultiply.onclick = () => {
-    const firstNumber = document.getElementById('number-one').value
-    const secondNumber = document.getElementById('number-two').value
-    if ((firstNumber !== '')&&(secondNumber == '')) {
-        alert('Введите второе число и нажмите "Calculate"')
-    } else if ((firstNumber !== '')&&(secondNumber !== '')) {
-        alert('Нажмите "Calculate"')
-    } else if (firstNumber == '') {
-        alert('Введите первое чиcло и нажмите "x"')
+buttonResult.onclick = () => {
+    debugger
+    a = firstNumber.value
+    b = secondNumber.value
+    let Result = 0
+    if (operation === '+') {
+        Result = (+a + +b)
+    } else if (operation === '-') {
+        Result = (+a - +b)
+    } else if (operation === '*') {
+        Result = (+a * +b)
+    } else if (operation === '/') {
+        Result = (+a / +b)
     }
-    buttonResult.onclick = () => {
-        const secondNumber = document.getElementById('number-two').value
-        const multiplyResult = (+firstNumber * +secondNumber)
-        console.log(multiplyResult)
-        resultat.textContent = multiplyResult
-    }
+    resultat.textContent = Result
 }
-
-buttonDivide.onclick = () => {
-    const firstNumber = document.getElementById('number-one').value
-    const secondNumber = document.getElementById('number-two').value
-    if ((firstNumber !== '')&&(secondNumber == '')) {
-        alert('Введите второе число и нажмите "Calculate"')
-    } else if ((firstNumber !== '')&&(secondNumber !== '')) {
-        alert('Нажмите "Calculate"')
-    } else if (firstNumber == '') {
-        alert('Введите первое чиcло и нажмите "/"')
-    }
-    buttonResult.onclick = () => {
-        const secondNumber = document.getElementById('number-two').value
-        const divideResult = (+firstNumber / +secondNumber)
-        console.log(divideResult)
-        resultat.textContent = divideResult
-    }
-}
-
-/* buttonMinus.onclick = () => {
-    const firstNumber = document.getElementById('number-one').value
-    const secondNumber = document.getElementById('number-two').value
-    console.log(+firstNumber - +secondNumber)
-}
-
-buttonMultiply.onclick = () => {
-    const firstNumber = document.getElementById('number-one').value
-    const secondNumber = document.getElementById('number-two').value
-    console.log(+firstNumber * +secondNumber)
-}
-buttonDivide.onclick = () => {
-    const firstNumber = document.getElementById('number-one').value
-    const secondNumber = document.getElementById('number-two').value
-    console.log(+firstNumber / +secondNumber)
-} */
